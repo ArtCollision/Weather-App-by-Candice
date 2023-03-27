@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather App by Candice 🌤️</title>
+  </head>
+
+  <body>
+    <h1 class="h1Style">🌸 Candice's Weather App</h1>
+    <br />
+
+    <!-- The weather app starts here -->
+    <div class="container">
+      <div class="weather-app">
+        <!-- The form to submit a city start here -->
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <!-- Field -->
+              <input
+                type="search"
+                placeholder="🔍 Type a city here..."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <!-- Button Search -->
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
+            <!-- Button Current -->
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100 shadow-sm"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <!-- The form to submit a city ends here -->
+
+        <!-- Today's temperature starts here -->
+        <div class="row">
+          <div class="col-4">
+            <h1 id="city"></h1>
+            <ul>
+              <li id="date"></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <div class="clearfix">
+              <div class="float-left">
+                <span class="temperature" id="temperature"></span
+                ><span class="units">°C </span>
+                <emoji-temperature class="temperature">☀️</emoji-temperature>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Today's temperature ends here -->
+        <!-- The forecast starts here -->
+        <div class="forecast">
+          <div class="row">
+            <div class="col-4">
+              <div class="forecast-frame">
+                <div>Monday</div>
+                <div>11°C</div>
+                <div>🌤️</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="forecast-frame">
+                <div>Tuesday</div>
+                <div>22°C</div>
+                <div>☀️</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="forecast-frame">
+                <div>Wednesday</div>
+                <div>20°C</div>
+                <div>☀️</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="forecast-frame">
+                <div>Thursday</div>
+                <div>17°C</div>
+                <div>☁️</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="forecast-frame">
+                <div>Friday</div>
+                <div>16°C</div>
+                <div>🌤️</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="forecast-frame">
+                <div>Saturday</div>
+                <div>15°C</div>
+                <div>🌤️</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- The forecast ends here -->
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
