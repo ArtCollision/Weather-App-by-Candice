@@ -1,5 +1,6 @@
 body {
   font-family: "Shantell Sans", cursive;
+  color: #9896f1;
 }
 
 h1 {
@@ -112,4 +113,28 @@ li {
   color: #ffffff;
   border: 1px solid #8ef6e4;
   background-color: #9896f1;
+}
+
+a:link {
+  color: #edb1f1;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #edb1f1;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9896f1;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #9896f1;
+  background-color: transparent;
+  text-decoration: underline;
 }
